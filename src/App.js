@@ -6,19 +6,19 @@ import ContactsList from "./Components/contacts/ContactsItem";
 import { connect } from "react-redux";
 
 class App extends Component {
-  state = {
-    contacts: [
-      { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
-      { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
-      { id: "id-3", name: "Eden Clements", number: "645-17-79" },
-      { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
-    ],
-    filter: "",
-  };
+  // state = {
+  //   contacts: [
+  //     { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+  //     { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+  //     { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+  //     { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
+  //   ],
+  //   filter: "",
+  // };
 
-  changeFilter = (filter) => {
-    this.setState({ filter });
-  };
+  // changeFilter = (filter) => {
+  //   this.setState({ filter });
+  // };
 
   // getVisibleContacts = () => {
   //   const { contacts, filter } = this.state;
@@ -53,13 +53,13 @@ class App extends Component {
   };
 
   render() {
-    const { contacts, filter } = this.state;
+    // const { contacts, filter } = this.state;
 
     return (
       <div>
         <PhonebookFormItem
-          onSubmit={this.formSubmithandler}
-          contacts={contacts}
+        // onSubmit={this.formSubmithandler}
+        // contacts={contacts}
         />
         <h2 className="contacts-title">Contacts</h2>
         <FilterItem />
@@ -72,16 +72,16 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  contacts: state.contacts.items,
-});
+// const mapStateToProps = (state) => ({
+//   contacts: state.contacts.items,
+// });
 
-const mapDispatchToProps = (dispatch) => ({
-  contactSave: () => null,
-  contactRemove: () => null,
-  filterUpdate: () => null,
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   contactSave: () => null,
+//   contactRemove: () => null,
+//   filterUpdate: () => null,
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-// export default App;
+export default App;
